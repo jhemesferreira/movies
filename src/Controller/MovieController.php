@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/movie', name:'app_movie_')]
+
 class MovieController extends AbstractController
 {
     #[Route('/', name: 'index', methods:['GET', 'HEAD'])]
