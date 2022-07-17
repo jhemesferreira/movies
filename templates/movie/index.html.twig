@@ -5,12 +5,15 @@
 {% block body %}
 
 <div class="example-wrapper">
-    <h1>Hello {{ global_author }} - {{ app_name }} ✅</h1>
+    <h1>{{ app_name }} - {{ global_author }}</h1>
 
-    This friendly message is coming from:
+    <h2>Movie list</h2>
     <ul>
-        <li>Your controller at <code><a href="{{ '/home/jhemesferreira/Bureau/Jhemes/études/symfony/movies/src/Controller/MovieController.php'|file_link(0) }}">src/Controller/MovieController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/jhemesferreira/Bureau/Jhemes/études/symfony/movies/templates/movie/index.html.twig'|file_link(0) }}">templates/movie/index.html.twig</a></code></li>
+        {% for movie in list_movie %}
+        <li>
+            <a href="{{ path('movie_show', { id: movie.id }) }}">{{ movie.title }}</a>
+        </li>
+        {% endfor %}
     </ul>
     </div>
 {% endblock %}

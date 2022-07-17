@@ -5,3 +5,4 @@
 3- bin/console --version = show symfony's version
 4- symfony console debug:router = show all routes
 5- symfony console list doctrine = list all commands with doctrine
+6- dd($something) - dump die - print $somethi on the browser
